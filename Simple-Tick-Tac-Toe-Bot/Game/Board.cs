@@ -9,5 +9,7 @@ public class Board {
           7 |  8 | 9 
     */
 
-    
+    public static string square() {
+        return ""; // return if either an x or an o is on the square
+    }
 }
