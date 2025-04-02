@@ -16,7 +16,7 @@ public abstract class Bots {
             board.replaceSquare(move);
         }
         else {
-            throw new OverflowException("Square is full!");
+            throw new SquareIsFull("Square is full!");
         }
     }
 }

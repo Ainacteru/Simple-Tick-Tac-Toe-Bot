@@ -33,7 +33,7 @@ class SquareIsFull : Exception
     public SquareIsFull() {  }
 
     public SquareIsFull(string square)
-        : base("Square {" + name + "} is Full")
+        : base("Square {" + square + "} is Full")
     {
 
     }
