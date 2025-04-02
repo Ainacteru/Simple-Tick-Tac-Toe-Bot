@@ -1,0 +1,15 @@
+/Users/Gary/Coding/C#/Simple-Tick-Tac-Toe-Bot/Simple-Tick-Tac-Toe-Bot/bin/Debug/net7.0/Simple-Tick-Tac-Toe-Bot
+/Users/Gary/Coding/C#/Simple-Tick-Tac-Toe-Bot/Simple-Tick-Tac-Toe-Bot/bin/Debug/net7.0/Simple-Tick-Tac-Toe-Bot.deps.json
+/Users/Gary/Coding/C#/Simple-Tick-Tac-Toe-Bot/Simple-Tick-Tac-Toe-Bot/bin/Debug/net7.0/Simple-Tick-Tac-Toe-Bot.runtimeconfig.json
+/Users/Gary/Coding/C#/Simple-Tick-Tac-Toe-Bot/Simple-Tick-Tac-Toe-Bot/bin/Debug/net7.0/Simple-Tick-Tac-Toe-Bot.dll
+/Users/Gary/Coding/C#/Simple-Tick-Tac-Toe-Bot/Simple-Tick-Tac-Toe-Bot/bin/Debug/net7.0/Simple-Tick-Tac-Toe-Bot.pdb
+/Users/Gary/Coding/C#/Simple-Tick-Tac-Toe-Bot/Simple-Tick-Tac-Toe-Bot/obj/Debug/net7.0/Simple-Tick-Tac-Toe-Bot.csproj.AssemblyReference.cache
+/Users/Gary/Coding/C#/Simple-Tick-Tac-Toe-Bot/Simple-Tick-Tac-Toe-Bot/obj/Debug/net7.0/Simple-Tick-Tac-Toe-Bot.GeneratedMSBuildEditorConfig.editorconfig
+/Users/Gary/Coding/C#/Simple-Tick-Tac-Toe-Bot/Simple-Tick-Tac-Toe-Bot/obj/Debug/net7.0/Simple-Tick-Tac-Toe-Bot.AssemblyInfoInputs.cache
+/Users/Gary/Coding/C#/Simple-Tick-Tac-Toe-Bot/Simple-Tick-Tac-Toe-Bot/obj/Debug/net7.0/Simple-Tick-Tac-Toe-Bot.AssemblyInfo.cs
+/Users/Gary/Coding/C#/Simple-Tick-Tac-Toe-Bot/Simple-Tick-Tac-Toe-Bot/obj/Debug/net7.0/Simple-Tick-Tac-Toe-Bot.csproj.CoreCompileInputs.cache
+/Users/Gary/Coding/C#/Simple-Tick-Tac-Toe-Bot/Simple-Tick-Tac-Toe-Bot/obj/Debug/net7.0/Simple-Tick-Tac-Toe-Bot.dll
+/Users/Gary/Coding/C#/Simple-Tick-Tac-Toe-Bot/Simple-Tick-Tac-Toe-Bot/obj/Debug/net7.0/refint/Simple-Tick-Tac-Toe-Bot.dll
+/Users/Gary/Coding/C#/Simple-Tick-Tac-Toe-Bot/Simple-Tick-Tac-Toe-Bot/obj/Debug/net7.0/Simple-Tick-Tac-Toe-Bot.pdb
+/Users/Gary/Coding/C#/Simple-Tick-Tac-Toe-Bot/Simple-Tick-Tac-Toe-Bot/obj/Debug/net7.0/Simple-Tick-Tac-Toe-Bot.genruntimeconfig.cache
+/Users/Gary/Coding/C#/Simple-Tick-Tac-Toe-Bot/Simple-Tick-Tac-Toe-Bot/obj/Debug/net7.0/ref/Simple-Tick-Tac-Toe-Bot.dll
