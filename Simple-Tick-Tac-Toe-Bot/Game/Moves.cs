@@ -2,10 +2,6 @@
 public class Moves {
 
     private int[] allowedMoves = {1,2,3,4,5,6,7,8,9};
-    public Moves() {
-
-    }
-
 
     public int[] LegalMoves() {
         for (int i = 0; i < Board.getSquares().Length; i++)
