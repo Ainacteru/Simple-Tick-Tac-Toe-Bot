@@ -26,3 +26,15 @@ public class Board {
         return board.squares[square]; // return if either an x or an o is on the square
     }
 }
+
+[Serializable]
+class SquareIsFull : Exception
+{
+    public SquareIsFull() {  }
+
+    public SquareIsFull(string square)
+        : base("Square {" + name + "} is Full")
+    {
+
+    }
+}

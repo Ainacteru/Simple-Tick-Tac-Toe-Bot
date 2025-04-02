@@ -13,7 +13,7 @@ public class Moves {
         return allowedMoves;
     }
 
-    private bool isMoveLegal(int move){
+    public bool isMoveLegal(int move){
         if(Board.SquareValue(move) == "X" || Board.SquareValue(move) == "O") {
             return true;
         }
