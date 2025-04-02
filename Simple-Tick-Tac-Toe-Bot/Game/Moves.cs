@@ -1,16 +1,26 @@
 
 public class Moves {
 
+    private int[] allowedMoves = {1,2,3,4,5,6,7,8,9};
+    public Moves() {
+
+    }
 
 
     public int[] LegalMoves() {
-        return new int[] { 1,};
+        for (int i = 0; i < Board.getSquares().Length; i++)
+        {
+            if(!isMoveLegal(i)) {
+                allowedMoves[i] = 0;
+            }
+        }
+        return allowedMoves;
     }
 
-    private bool isMoveLegal(){
-        if(Board.square() != null) {
-            return false;
+    private bool isMoveLegal(int move){
+        if(Board.SquareValue(move) == "X" || Board.SquareValue(move) == "O") {
+            return true;
         }
-        return true;
+        return false;
     }
 }

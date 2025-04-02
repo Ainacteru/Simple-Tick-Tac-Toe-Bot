@@ -9,7 +9,20 @@ public class Board {
           7 |  8 | 9 
     */
 
-    public static string square() {
-        return ""; // return if either an x or an o is on the square
+    private string[] squares = { "1", "2", "3", "4", "5", "6", "7", "8", "9"};
+
+    public void replaceSquare(int square, string value) {
+        squares[square] = value;
+    }
+
+    public static string[] getSquares() {
+        Board board = new Board();
+        return board.squares;
+    }
+
+    public static string SquareValue(int square) {
+        Board board = new Board();
+
+        return board.squares[square]; // return if either an x or an o is on the square
     }
 }
