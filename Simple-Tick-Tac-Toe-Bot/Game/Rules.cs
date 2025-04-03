@@ -8,7 +8,8 @@ public class Rules {
     }
 
     public void win() {
-        TestHorizontalSquares();
+        //TestHorizontalSquares();
+        TestVerticalSquares();
     }
 
     private void TestHorizontalSquares() {
@@ -31,8 +32,8 @@ public class Rules {
                 }
                 else if (values == "O") {
                     string value = values.ToString();
-                    num ++;
-                    if (num == 3) {
+                    num --;
+                    if (num == -3) {
                         winner = false;
                         return;
                     }
@@ -46,14 +47,33 @@ public class Rules {
     }
     private void TestVerticalSquares() {
         //vertical squares are all a difference/sum of 3
+        int VertSquare = 0;
+        int num = 0;
         for (int i = 0; i < 9; i++) {
             string[] squares = board.GetSquares();
 
-            foreach (var values in squares) {
-                
+            if (squares[VertSquare] == "X") {
+                num++;
+                if (num == 3) {
+                    winner = true; return;
+                }
+            } else if (squares[VertSquare] == "O") {
+                num--;
+                if (num == -3) {
+                    winner = false; return;
+                }
+            }
+            if (i < 2) {
+                VertSquare += 3;
+                Console.WriteLine(i + "," + VertSquare);
+            }
+            else {
+                Console.WriteLine("overflow!");
+                return;
             }
         }
-
+        winner = null;
+        return;
     }
 
     public string GetWinner() {
