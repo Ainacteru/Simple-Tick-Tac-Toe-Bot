@@ -9,14 +9,14 @@ public class Board {
           7 |  8 | 9 
     */
 
-    private string[] squares = { "1", "2", "3", "4", "5", "6", "7", "8", "9"};
+    private string[] squares = { "O", "O", "O", "4", "5", "6", "7", "8", "9"};
 
-    public void replaceSquare(int square, string value) {
+    public void ReplaceSquare(int square, string value) {
         squares[square - 1] = value;
-        Console.WriteLine(square + " was replaced with " + value);
+        //Console.WriteLine(square + " was replaced with " + value);
     }
 
-    public string[] getSquares() {
+    public string[] GetSquares() {
         return squares;
     }
 
