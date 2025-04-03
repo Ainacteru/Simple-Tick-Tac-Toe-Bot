@@ -1,7 +1,9 @@
 public class SampleBot : Bots
 {
+    public SampleBot(Board board) : base(board) { }
+
     public override int Move()
     {
-        throw new NotImplementedException();
+        return 1;
     }
 }

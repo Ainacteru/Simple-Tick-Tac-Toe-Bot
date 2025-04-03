@@ -12,18 +12,17 @@ public class Board {
     private string[] squares = { "1", "2", "3", "4", "5", "6", "7", "8", "9"};
 
     public void replaceSquare(int square, string value) {
-        squares[square] = value;
+        squares[square - 1] = value;
+        Console.WriteLine(square + " was replaced with " + value);
     }
 
-    public static string[] getSquares() {
-        Board board = new Board();
-        return board.squares;
+    public string[] getSquares() {
+        return squares;
     }
 
-    public static string SquareValue(int square) {
-        Board board = new Board();
+    public string SquareValue(int square) {
 
-        return board.squares[square]; // return if either an x or an o is on the square
+        return squares[square]; // return if either an x or an o is on the square
     }
 }
 

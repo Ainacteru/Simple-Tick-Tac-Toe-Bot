@@ -3,20 +3,28 @@ public class Moves {
 
     private int[] allowedMoves = {1,2,3,4,5,6,7,8,9};
 
+    private Board board;
+
+    public Moves(Board board) {
+        this.board = board;
+    }
+
     public int[] LegalMoves() {
-        for (int i = 0; i < Board.getSquares().Length; i++)
-        {
-            if(!isMoveLegal(i)) {
-                allowedMoves[i] = 0;
+        List<int> allowedMoves = new List<int>();
+
+        for (int i = 1; i <= 9; i++) { // 1-based indexing
+            if (isMoveLegal(i)) {
+                allowedMoves.Add(i);
             }
         }
-        return allowedMoves;
+
+        return allowedMoves.ToArray();
     }
 
     public bool isMoveLegal(int move){
-        if(Board.SquareValue(move) == "X" || Board.SquareValue(move) == "O") {
-            return true;
+        if(board.SquareValue(move) == "X" || board.SquareValue(move) == "O") {
+            return false;
         }
-        return false;
+        return true;
     }
 }
