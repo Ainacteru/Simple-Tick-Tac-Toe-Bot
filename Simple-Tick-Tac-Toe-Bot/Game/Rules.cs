@@ -52,18 +52,18 @@ public class Rules {
         for (int i = 0; i < 9; i++) {
             string[] squares = board.GetSquares();
 
-            if (squares[VertSquare] == "X") {
+            if (squares[VertSquare-1] == "X") {
                 num++;
                 if (num == 3) {
                     winner = true; return;
                 }
-            } else if (squares[VertSquare] == "O") {
+            } else if (squares[VertSquare-1] == "O") {
                 num--;
                 if (num == -3) {
                     winner = false; return;
                 }
             }
-            if (i < 2) {
+            if (i < 3) {
                 VertSquare += 3;
                 Console.WriteLine(i + "," + VertSquare);
             }
