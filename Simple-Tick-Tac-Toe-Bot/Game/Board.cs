@@ -9,9 +9,13 @@ public class Board {
           7 |  8 | 9 
     */
 
-    private string[] squares = { "X", "2", "3", 
-                                 "X", "5", "6", 
-                                 "7", "8", "9"};
+    private string[] squares = { "1", "2", "X", 
+                                 "4", "5", "X", 
+                                 "7", "8", "X"};
+
+    //    private string[] squares = { "1", "2", "3", 
+    //                                 "4", "5", "6", 
+    //                                 "7", "8", "9"};
 
     public void ReplaceSquare(int square, string value) {
         squares[square - 1] = value;

@@ -46,34 +46,36 @@ public class Rules {
         return;
     }
     private void TestVerticalSquares() {
-        //vertical squares are all a difference/sum of 3
-        int VertSquare = 0;
-        int num = 0;
-        for (int i = 0; i < 9; i++) {
-            string[] squares = board.GetSquares();
+        string[] squares = board.GetSquares();
+        int winnerCounter = 0;
 
-            if (squares[VertSquare-1] == "X") {
-                num++;
-                if (num == 3) {
-                    winner = true; return;
+        for (int i = 0; i < 3; i++)
+        {
+            string num = squares[i];
+            
+            if (num == "X") {
+                num += 3;
+                winnerCounter ++;
+
+                if (num == "X") {
+                    num += 3;
+                    winnerCounter ++;
                 }
-            } else if (squares[VertSquare-1] == "O") {
-                num--;
-                if (num == -3) {
-                    winner = false; return;
+            }
+            else if (num == "O") {   
+                num += 3;
+                winnerCounter--;
+
+                if (num == "O") {   
+                    num += 3;
+                    winnerCounter--;
                 }
             }
-            if (i < 3) {
-                VertSquare += 3;
-                Console.WriteLine(i + "," + VertSquare);
-            }
-            else {
-                Console.WriteLine("overflow!");
-                return;
-            }
+            Console.WriteLine(num);
+            //Console.WriteLine(winnera);
         }
+
         winner = null;
-        return;
     }
 
     public string GetWinner() {
