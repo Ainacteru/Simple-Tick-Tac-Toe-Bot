@@ -13,69 +13,45 @@ public class Rules {
     }
 
     private void TestHorizontalSquares() {
-        int numberToTest = 3;
-
         string[] squares = board.GetSquares();
 
-        for (int i = 0; i < 9; i++)
-        {
-            int num = 0;
-            foreach (var values in squares.Take(numberToTest).ToArray()) { //tests if someone wins horizontally
-                
-                if (values == "X") {
-                    string value = values.ToString();
-                    num ++;
-                    if (num == 3) {
-                        winner = true;
-                        return;
-                    }
-                }
-                else if (values == "O") {
-                    string value = values.ToString();
-                    num --;
-                    if (num == -3) {
-                        winner = false;
-                        return;
-                    }
-                }
+        for (int i = 0; i < 7; i += 3) {
+            if (squares[i] == squares[i+1] && squares[i+1] == squares[i+2]) {
+                SetWinner(squares[i]);
             }
-
-            numberToTest += 3;
         }
-        winner = null;
-        return;
     }
+    
     private void TestVerticalSquares() {
         string[] squares = board.GetSquares();
-        int winnerCounter = 0;
 
-        for (int i = 0; i < 3; i++)
-        {
-            string num = squares[i];
-            
-            if (num == "X") {
-                num += 3;
-                winnerCounter ++;
-
-                if (num == "X") {
-                    num += 3;
-                    winnerCounter ++;
-                }
+        for (int i = 0; i < 3; i++) {
+            if(squares[i] == squares[i+3] && squares[i+3] == squares[i+6]) {
+                SetWinner(squares[i]);
             }
-            else if (num == "O") {   
-                num += 3;
-                winnerCounter--;
+        }
+    }
 
-                if (num == "O") {   
-                    num += 3;
-                    winnerCounter--;
-                }
-            }
-            Console.WriteLine(num);
-            //Console.WriteLine(winnera);
+    private void TestDiagonalSquares() {
+        string[] squares = board.GetSquares();
+
+        if (squares[0] == squares[4] && squares[4] == squares[8]) {
+            SetWinner(squares[0]);
         }
 
-        winner = null;
+        if (squares[2] == squares[4] && squares[4] == squares[6]) {
+            SetWinner(squares[2]);
+        }
+    }
+
+    private void SetWinner(string player) {
+        if (symbol == "X") {
+            winner = true;
+        } else if (symbol == "O") {
+            winner = false;
+        } else {
+            winner = null;
+        }
     }
 
     public string GetWinner() {
