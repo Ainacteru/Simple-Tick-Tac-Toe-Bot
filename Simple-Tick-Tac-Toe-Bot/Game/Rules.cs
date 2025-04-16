@@ -45,9 +45,9 @@ public class Rules {
     }
 
     private void SetWinner(string player) {
-        if (symbol == "X") {
+        if (player == "X") {
             winner = true;
-        } else if (symbol == "O") {
+        } else if (player == "O") {
             winner = false;
         } else {
             winner = null;
