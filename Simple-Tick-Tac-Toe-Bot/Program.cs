@@ -10,7 +10,7 @@ class Program
         SampleBot bot = new SampleBot(board);
 
         VisualizeBoard(board);
-        rules.win();
+        rules.TestForWin();
         Console.WriteLine(rules.GetWinner());
 
         return;

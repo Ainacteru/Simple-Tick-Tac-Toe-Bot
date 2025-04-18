@@ -7,15 +7,16 @@ public class Rules {
         this.board = board;
     }
 
-    public void win() {
-        //TestHorizontalSquares();
+    public void TestForWin() {
+        TestHorizontalSquares();
         TestVerticalSquares();
+        TestDiagonalSquares();
     }
 
     private void TestHorizontalSquares() {
         string[] squares = board.GetSquares();
 
-        for (int i = 0; i < 7; i += 3) {
+        for (int i = 0; i < 7; i += 3) { // uses 7 so no overflow error, and increments by 3 so that only 123 would work not 234 (not horizontal anymore)
             if (squares[i] == squares[i+1] && squares[i+1] == squares[i+2]) {
                 SetWinner(squares[i]);
             }
