@@ -9,7 +9,7 @@ public class Board {
           7 |  8 | 9 
     */
 
-    private string[] squares = { "1", "2", "3", 
+    private static string[] squares = { "1", "2", "3", 
                                  "4", "5", "6", 
                                  "7", "8", "9"};
 
@@ -17,16 +17,16 @@ public class Board {
     //                                 "4", "5", "6", 
     //                                 "7", "8", "9"};
 
-    public void ReplaceSquare(int square, string value) {
+    public static void ReplaceSquare(int square, string value) {
         squares[square - 1] = value;
         //Console.WriteLine(square + " was replaced with " + value);
     }
 
-    public string[] GetSquares() {
+    public static string[] GetSquares() {
         return squares;
     }
 
-    public string SquareValue(int square) {
+    public static string SquareValue(int square) {
 
         return squares[square]; // return if either an x or an o is on the square
     }

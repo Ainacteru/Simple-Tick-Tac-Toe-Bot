@@ -4,17 +4,11 @@ class Program
 {
     static void Main(string[] args)
     {
-        Board board = new Board();
-        Moves moves = new Moves(board);
-        Rules rules= new Rules(board);
-        SampleBot bot = new SampleBot(board);
+        Moves moves = new Moves();
+        Rules rules= new Rules();
+        SampleBot bot = new SampleBot();
 
-        VisualizeBoard(board);
-        rules.TestForWin();
-        Console.WriteLine(rules.GetWinner());
-
-        return;
-
+        rules.GetPlayer();
 
         Console.WriteLine("This is a simple Tic-Tac-Toe Bot, type anything to continue");
         if (Console.ReadLine() != null) {
@@ -22,20 +16,20 @@ class Program
 
             bot.MakeMove();
 
-            VisualizeBoard(board);
+            VisualizeBoard();
         }
     }
 
     public static void SetUpGame(Bots bots) {
         if(bots.GetInstances() > 2) {
-            throw new Exception("Fatal Error: more than 2 bots running at the same time");
+            throw new Exception("More than 2 bots running at the same time");
         }
     }
 
-    public static void VisualizeBoard(Board board) {
+    public static void VisualizeBoard() {
         Console.WriteLine();
 
-            var squares = board.GetSquares(); // Get the array
+            var squares = Board.GetSquares(); // Get the array
             for (int i = 0; i < squares.Length; i++)
             {
                 Console.Write(squares[i] + " ");

@@ -1,11 +1,7 @@
 public class Rules {
 
-    private Board board;
     private bool? winner = null; //null = no one wins, true = x wins, false = o wins || basically using a nullable boolean as a tri-state boolean
 
-    public Rules(Board board) {
-        this.board = board;
-    }
 
     public void TestForWin() {
         TestHorizontalSquares();
@@ -14,7 +10,7 @@ public class Rules {
     }
 
     private void TestHorizontalSquares() {
-        string[] squares = board.GetSquares();
+        string[] squares = Board.GetSquares();
 
         for (int i = 0; i < 7; i += 3) { // uses 7 so no overflow error, and increments by 3 so that only 123 would work not 234 (not horizontal anymore)
             if (squares[i] == squares[i+1] && squares[i+1] == squares[i+2]) {
@@ -24,7 +20,7 @@ public class Rules {
     }
     
     private void TestVerticalSquares() {
-        string[] squares = board.GetSquares();
+        string[] squares = Board.GetSquares();
 
         for (int i = 0; i < 3; i++) {
             if(squares[i] == squares[i+3] && squares[i+3] == squares[i+6]) {
@@ -34,7 +30,7 @@ public class Rules {
     }
 
     private void TestDiagonalSquares() {
-        string[] squares = board.GetSquares();
+        string[] squares = Board.GetSquares();
 
         if (squares[0] == squares[4] && squares[4] == squares[8]) {
             SetWinner(squares[0]);
@@ -63,6 +59,18 @@ public class Rules {
         } else {
             return "No one won";
         }
+    }
+
+    public string GetPlayer() {
+        var player = new Random();
+        List<string> available = new List<string>() {"X", "O"};
+
+        int randomIndex = player.Next(available.Count);
+        string final = available[randomIndex];
+        available.Remove(available[randomIndex]);
+
+        Console.WriteLine(final);
+        return final.ToString();
     }
 
 }

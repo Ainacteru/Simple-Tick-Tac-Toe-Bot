@@ -1,14 +1,6 @@
 
 public class Moves {
 
-    private int[] allowedMoves = {1,2,3,4,5,6,7,8,9};
-
-    private Board board;
-
-    public Moves(Board board) {
-        this.board = board;
-    }
-
     public int[] LegalMoves() {
         List<int> allowedMoves = new List<int>();
 
@@ -22,7 +14,7 @@ public class Moves {
     }
 
     public bool isMoveLegal(int move){
-        if(board.SquareValue(move) == "X" || board.SquareValue(move) == "O") {
+        if(Board.SquareValue(move) == "X" || Board.SquareValue(move) == "O") {
             return false;
         }
         return true;
